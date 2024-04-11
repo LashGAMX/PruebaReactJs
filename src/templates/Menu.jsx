@@ -15,7 +15,7 @@ export const Menu = () => {
                 <button class="tablinks active" onclick="openCity(event, 'London')"><img src={datos} alt="" width="20" /> DATOS</button>
                 <button class="tablinks" onclick="openCity(event, 'Paris')"><img src={plan} alt="" width="20" /> PLAN</button>
             </div>
-
+            <br/>
             <div className="row">
                 <div className="col-6">
                     <PropiedadProyecto />
