@@ -93,3 +93,10 @@
         
         filter: invert(0.9);
     }
+    .bgMenu:active{
+        background: #fec702;
+    }
+    .bgMenu:hover{
+        background: #fec702;
+    }
+    
