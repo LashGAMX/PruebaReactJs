@@ -1,0 +1,7 @@
+.btnEtapa{
+    border: none;
+    background-color: #fff;
+}
+.btnEtapa:hover{
+    text-decoration: underline;
+}

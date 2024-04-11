@@ -1,0 +1,85 @@
+.bg-color1{
+    background-color: #eaeaea;
+}
+.bg-color2{
+    background-color: #eff5fc;
+}
+.bg-color3{
+    background-color: #a5a5a5;
+}
+.bg-color4{
+    background-color: #fec702;
+}
+
+.color1{
+    background-color: #eaeaea;
+}
+.color2{
+    background-color: #eff5fc;
+}
+.color3{
+    background-color: #a5a5a5;
+}
+.color4{
+    background-color: #fec702;
+}
+
+.btnBorde {
+    position: relative;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: #fec702;
+   }
+   
+   .btnBorde:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btnBorde:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btnBorde::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   .btnBorde::after {
+    background-color: #fff;
+   }
+   
+   .btnBorde:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }
+
+   .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3%;
+    font-size: 10px;
+    background-color: #a5a5a5;
+    color: black;
+    text-align: center;
+  }
