@@ -10,10 +10,11 @@ import { Etapas } from '../components/Etapas'
 export const Menu = () => {
   return (
     <>
+    <br></br>
         <div className='container'>
             <div class="tab">
-                <button class="tablinks active" onclick="openCity(event, 'London')"><img src={datos} alt="" width="20" /> DATOS</button>
-                <button class="tablinks" onclick="openCity(event, 'Paris')"><img src={plan} alt="" width="20" /> PLAN</button>
+                <button class="tablinks active" onclick="openDatos(event, 'Datos')"><img src={datos} alt="" width="20" /> DATOS</button>
+                <button class="tablinks" onclick="openPaln(event, 'Plan')"><img src={plan} alt="" width="20" /> PLAN</button>
             </div>
             <br/>
             <div className="row">

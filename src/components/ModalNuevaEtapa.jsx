@@ -21,20 +21,35 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     },
   }));
 
-export const ModalNuevaEtapa = () => {
-    const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
-    const handleClose = () => {
-      setOpen(false);
+  function useLocalStorage(itemName, initialValue) {
+    const localStorageItem = localStorage.getItem(itemName);
+  
+    let parsedItem;
+    
+    if (!localStorageItem) {
+      localStorage.setItem(itemName, JSON.stringify(initialValue));
+      parsedItem = initialValue;
+    } else {
+      parsedItem = JSON.parse(localStorageItem);
+    }
+  
+    const [item, setItem] = React.useState(parsedItem);
+  
+    const saveItem = (newItem) => {
+      localStorage.setItem(itemName, JSON.stringify(newItem));
+      setItem(newItem);
     };
   
+    return [item, saveItem];
+  }
+  
+
+export const ModalNuevaEtapa = ({handleClose,handleClickOpen,open}) => {
+
 
     return (
       <React.Fragment>
-        <button className='btnEtapa'  onClick={handleClickOpen}><img src={agregar} alt="agregar" width="20" /> Agregar Etapa</button>
+        
         <BootstrapDialog
           onClose={handleClose}
           aria-labelledby="customized-dialog-title"
